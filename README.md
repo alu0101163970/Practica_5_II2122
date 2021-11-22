@@ -63,11 +63,8 @@ public class KeywordScript : MonoBehaviour
 
     void Start()
     {
-        ////
         player = GameObject.Find("Player");
         _input = player.GetComponent<StarterAssetsInputs>();
-        ////
-        dictationRecognizer =  GameObject.Find("DictationRecognizer");
         m_Keywords = new string[] {"Derecha", "Izquierda", "Avanzar", "Adelante", "Parar", "Avanzar hacia atras", "Saltar", "Correr", "Caminar"};
         m_Recognizer = new KeywordRecognizer(m_Keywords);
         m_Recognizer.OnPhraseRecognized += OnPhraseRecognized;
